@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DATABASE_URL', 'heroku'),
+    'default' => env('DB_CONNECTION', 'heroku'),
 
     /*
     |--------------------------------------------------------------------------
