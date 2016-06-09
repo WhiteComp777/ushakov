@@ -12,5 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
+Route::get('about', function () {
+    return view('main');
+});
+Route::get('blog', function () {
+    return view('main');
+});
+Route::get('portfolio', function () {
+    return view('main');
+});
+Route::get('hell', function () {
+    return view('main');
+});
+Route::get('contacts', function () {
+    return view('main');
+});
+
+
