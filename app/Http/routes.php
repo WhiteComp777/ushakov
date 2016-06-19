@@ -6,7 +6,7 @@ Route::get('/2', function(){
 });
 
 Route::get('/', function () {
-    return view('main2');
+    return view('main');
 });
 Route::resource('blog','PostController', ['only' => [
     'index', 'show'

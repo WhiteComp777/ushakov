@@ -14,17 +14,17 @@ class AdminBlogController extends Controller
     	return view('admin.posts', compact('posts'));
     }
     function create(){
-    	return view('admin.createBlogPost');
+    	return view('admin.createPost');
     }
     function show(BlogPost $post){
-    	return view('admin.post', compact('post'));
+    	return view('admin.createPost', compact('post'));
     }
     function store(){
     	$post = BlogPost::create(request()->all());
     	return redirect('admin/post/'.$post->id);
     }
     function edit(BlogPost $post){
-        return view('admin.createBlogPost', compact('post'));
+        return view('admin.createPost', compact('post'));
     }
     function update(BlogPost $post){
         $post->update(request()->all());
