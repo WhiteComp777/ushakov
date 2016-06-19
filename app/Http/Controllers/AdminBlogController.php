@@ -3,34 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\BlogPost;
 use App\Http\Requests;
 
 class AdminBlogController extends Controller
 {
     //
     function index(){
-    	$posts = Post::all();
+    	$posts = BlogPost::all();
     	return view('admin.posts', compact('posts'));
     }
     function create(){
-    	return view('admin.createPost');
+    	return view('admin.createBlogPost');
     }
-    function show(Post $post){
+    function show(BlogPost $post){
     	return view('admin.post', compact('post'));
     }
     function store(){
-    	$post = Post::create(request()->all());
+    	$post = BlogPost::create(request()->all());
     	return redirect('admin/post/'.$post->id);
     }
-    function edit(Post $post){
-        return view('admin.createPost', compact('post'));
+    function edit(BlogPost $post){
+        return view('admin.createBlogPost', compact('post'));
     }
-    function update(Post $post){
+    function update(BlogPost $post){
         $post->update(request()->all());
         return redirect('/admin/post/'.$post->id);
     }
-    function delete(Post $post){
+    function delete(BlogPost $post){
         $post->delete();
         return redirect('/admin/post');
     }
