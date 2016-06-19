@@ -8,6 +8,6 @@
 <section class="postPreview">
 	<h1> @{{ post.title }}</h1>
 	@{{{ post.content | truncate '20' }}}
-	<a href="#" class="readMore" v-link="{name: 'post', params: { postId: 5 }}">Читать дальше</a>
+	<a href="#" class="readMore" v-link="{name: 'post', params: { postId: post.id }}">Читать дальше</a>
 </section>
 </div>
