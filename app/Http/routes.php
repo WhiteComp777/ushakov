@@ -1,33 +1,18 @@
 <?php
+use App\Post;
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+Route::get('/2', function(){
+	return view('main2');
+});
 
 Route::get('/', function () {
-    return view('main');
+    return view('main2');
 });
-Route::get('about', function () {
-    return view('main');
-});
-Route::get('blog', function () {
-    return view('main');
-});
-Route::get('portfolio', function () {
-    return view('main');
-});
-Route::get('hell', function () {
-    return view('main');
-});
-Route::get('contacts', function () {
-    return view('main');
-});
+Route::resource('blog','PostController', ['only' => [
+    'index', 'show'
+]]);
 
+Route::get('admin', "AdminController@main");
+Route::resource('admin/post', 'AdminBlogController');
+Route::get('admin/post/{post}/delete', 'AdminBlogController@delete');
 
