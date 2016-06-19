@@ -25,13 +25,18 @@
 </div>
 	<button class="btn btn-success">Submit</button>
 </form>
-<script src="http://cdn.tinymce.com/4/tinymce.min.js"></script>
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script>
 	tinymce.init({ selector:'textarea', 
-	plugins: "code",
+	plugins: "code fullscreen",
 	inline_styles : false
   // toolbar: "code",
   // menubar: "tools"
    });
 </script>
+<style>
+	div.mce-fullscreen{
+		z-index: 9999999;
+	}
+</style>
 @endsection('content')

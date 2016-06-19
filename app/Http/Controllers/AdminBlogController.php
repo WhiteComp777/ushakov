@@ -8,7 +8,9 @@ use App\Http\Requests;
 
 class AdminBlogController extends Controller
 {
-    //
+    function __construct(){
+        $this->middleware('auth');
+    }
     function index(){
     	$posts = BlogPost::all();
     	return view('admin.posts', compact('posts'));

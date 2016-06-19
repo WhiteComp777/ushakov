@@ -63,10 +63,23 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        return "no create";
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function showRegistrationForm()
+{
+    return redirect('login');
+}
+
+public function register()
+{
+
+}
+
+
 }
