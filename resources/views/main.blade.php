@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/nprogress.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/icons.css" />
@@ -57,6 +58,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.13/vue-router.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.8.0/vue-resource.js"></script>
+<!-- progress -->
+<script src="js/nprogress.js"></script>
 
 <!-- univerce -->
 		<script src="js/TweenLite.min.js"></script>

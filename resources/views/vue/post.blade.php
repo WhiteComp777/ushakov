@@ -1,7 +1,7 @@
 <div class="head_space"></div>
 <nav class="blog_nav">
 	<ul>
-		<li><a href="">Все записи</a></li>
+		<li><a href="#" v-link="{ name: 'blog' }">Все записи</a></li>
 	</ul>	
 </nav>
 <artice class="blog">

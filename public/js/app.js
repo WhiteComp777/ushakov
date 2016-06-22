@@ -42,12 +42,14 @@ var Blog = Vue.extend({
  		}
  	},
     created: function(){
+        NProgress.start();
     	this.getPosts();
     },
     methods: {
     	getPosts: function(){
     		var resource = this.$resource('blog/');
     		resource.get({}, function(posts){
+                NProgress.done();
     			this.posts = posts;
     		});
     	}
@@ -68,6 +70,7 @@ var Post = Vue.extend({
         }
     },
     created: function(){
+        NProgress.start();
         this.getPost();
     },
     methods: {
@@ -76,18 +79,27 @@ var Post = Vue.extend({
             var resource = this.$resource('blog/'+this.$route.params.postId);
             resource.get({}, function(post){
                 this.post = post;
-                console.log(post);
+                NProgress.done();
             });
         }
     },
 })
 
 var Portfolio = Vue.extend({
-    template: '#portfolioTPL'
+    template: '#portfolioTPL',
+    created: function(){
+        NProgress.start();
+    },
+    ready: function(){
+        NProgress.done();
+    }
 })
 
 var Hell = Vue.extend({
     template: '#hellTPL',
+    created:  function(){ NProgress.start(); },
+    ready: function(){ NProgress.done(); },
+
 })
 
 var Contacts = Vue.extend({

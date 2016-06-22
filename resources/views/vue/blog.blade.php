@@ -1,7 +1,7 @@
 <div class="head_space"></div>
 <nav class="blog_nav">
 	<ul>
-		<li><a href="">Поиск</a></li>
+		<li style="display: none;"><a href="">Поиск</a></li>
 	</ul>	
 </nav>
 <div v-for="post in posts">
