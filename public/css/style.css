@@ -423,6 +423,10 @@ text-align: left;
     font-style: italic;
     color: #838383;
 }
+.blog img{
+    width: 100%;
+    height: auto;
+}
 .postPreview{
         max-width: 800px;
     margin: auto;
@@ -444,4 +448,13 @@ text-align: left;
         color: #B5B5B5;
     /* text-decoration: none; */
     font-style: italic;
+}
+img.bigImg{
+    width: 100%;
+    height: auto;
+}
+.aboutPage{}
+.aboutPage .aboutText{
+    width: 800px;
+    margin: 0 auto;
 }

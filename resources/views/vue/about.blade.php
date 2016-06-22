@@ -1,10 +1,7 @@
 <div class="head_space"></div>
-<artice class="blog">
-	<header>
-		<h1>@{{ post.title }}</h1>
-		<h2>@{{ post.subtitle }}</h2>
-	</header>
-	<section>
-		@{{{ post.content }}}
-	</section>
-</artice>
+<section class="aboutPage">
+<div class="aboutText">
+	<h1>Привет, меня зовут Ушаков Илья</h1>
+</div>
+	<!-- <img src="https://unsplash.it/1200/600/?random" alt="" class="bigImg"> -->
+</section>

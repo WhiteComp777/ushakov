@@ -21,14 +21,14 @@
 
 <div class="form-group">
 	<label for="">Post</label>
-	<textarea name="content" id="" cols="30"  class="form-control" rows="10">@if(isset($post)){{ $post->content }}@endif</textarea>
+	<textarea name="content" id="" cols="30"  class="form-control" rows="32">@if(isset($post)){{ $post->content }}@endif</textarea>
 </div>
 	<button class="btn btn-success">Submit</button>
 </form>
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script>
 	tinymce.init({ selector:'textarea', 
-	plugins: "code fullscreen",
+	plugins: "code fullscreen image",
 	inline_styles : false
   // toolbar: "code",
   // menubar: "tools"

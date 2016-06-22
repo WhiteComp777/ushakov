@@ -42,22 +42,16 @@
 @include('vue.about')
 </template>
 
+<template id="hellTPL">
+@include('vue.hell')
+</template>
 
-<div class="call">
-<div class="call_close" @click="call=false">x</div>
-<div class="call_inner">
-	<h1>Напиши мне</h1>
-	<h2>Что-нибудь доброе</h2>
-	<form action="">
-		<label for="">Господин, представьтесь</label>
-		<input type="text" name="name" value="" placeholder="Лорд Волан-де-Мо́рт">
+<template id="portfolioTPL">
+@include('vue.portfolio')
+</template>
 
-		<label for="">И пишете здесь</label>
-		<textarea name="" id="" placeholder="Где Гарри?"></textarea>
-		<button>Отправить</button>
-	</form>
-</div>
-</div>
+
+@include('vue.call')
 <template id="contactsTPL"> @include("vue.contacts") </template>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.js"></script>
@@ -77,7 +71,7 @@
 <script src="js/app.js"></script>
 
 
-@include('vue.call')
+
  </div> <!-- body inner-->
 <!-- <script src="js/jquery-2.2.4.min.js"></script> -->
 <!-- <script src="js/script.js"></script> -->

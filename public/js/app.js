@@ -7,7 +7,9 @@ var Main = Vue.extend({
     template: '#mainTPL',
     ready: function(){
         startUniverce();
-    }
+    },
+    // data: function(){ return data; },
+   
 })
 
 var About = Vue.extend({
@@ -17,18 +19,18 @@ var About = Vue.extend({
             post: '',
         }
     },
-    created: function(){
-        this.getPost();
-    },
-    methods: {
-        getPost: function(){
-            aboutmeId = 4;
-            var resource = this.$resource('blog/4');
-            resource.get({}, function(post){
-                this.post = post;
-            });
-        }
-    },
+    // created: function(){
+    //     this.getPost();
+    // },
+    // methods: {
+    //     getPost: function(){
+    //         aboutmeId = 4;
+    //         var resource = this.$resource('blog/4');
+    //         resource.get({}, function(post){
+    //             this.post = post;
+    //         });
+    //     }
+    // },
 
 })
 
@@ -100,17 +102,20 @@ var Contacts = Vue.extend({
 })
 
 var App = Vue.extend({
-    methods: {
-        openCall: function(){
-            // document.getElementsByClassName('body_inner')[0].addClass('openCall');
-        }
-    },
     data: function(){
         return  data;
     },
     ready: function(){
         // alert(this.call);
+    },
+     methods: {
+        toggleCall: function(){
+            alert("12");
+            if (this.call){ this.call = false;}
+            else { this.call = true; }
+        }
     }
+
 })
 var router = new VueRouter()
 

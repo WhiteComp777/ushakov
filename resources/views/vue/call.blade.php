@@ -1,5 +1,5 @@
 <div class="call">
-<div class="call_close">x</div>
+<div class="call_close" @click="call=false">x</div>
 <div class="call_inner">
 	<h1>Напиши мне</h1>
 	<h2>Что-нибудь доброе</h2>
