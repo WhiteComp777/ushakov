@@ -1,7 +1,21 @@
-<div class="head_space"></div>
 <section class="aboutPage">
-<div class="aboutText">
+<!-- <div class="aboutText">
 	<h1>Привет, меня зовут Ушаков Илья</h1>
+</div> -->
+<div class="lhalf">
+	<img src="img/small.jpg" alt="">	
 </div>
-	<!-- <img src="https://unsplash.it/1200/600/?random" alt="" class="bigImg"> -->
+<div class="rhalf">
+<div class="head_space"></div>
+	<h2>Web-Developer</h2>
+	<ol>
+		<li>Занимаюсь разработкой сайтов уже более 3х лет.</li>
+		<li>Пишу на PHP, JS, Python</li>
+		<li>Учусь в Санкт-Петербургском политехническом университете Петра Великого</li>
+		<li>В Институте Компьютерных Наук и Технологий</li>
+	</ol>
+	<!-- <p> </p> -->
+</div>
+
+
 </section>

@@ -474,3 +474,35 @@ img.bigImg{
 .pItem .images img{
     width: 100%;
 } 
+
+.lhalf, .rhalf{
+    width: 49.6%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+.lhalf{}
+.lhalf img{
+    width: 100%;
+    position: absolute;
+}
+.rhalf{}
+.rhalf h2{
+    font-size: 55px;
+}
+.rhalf h3{}
+.rhalf p{}
+.rhalf ol{
+    text-align: center;
+    /* list-style-type: circle; */
+    margin-top: 20px;
+    color: #353535;
+}
+.rhalf li{
+    /* list-style-type: circle; */
+    padding: 8px 0;
+}
