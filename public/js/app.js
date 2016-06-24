@@ -89,10 +89,53 @@ var Portfolio = Vue.extend({
     template: '#portfolioTPL',
     created: function(){
         NProgress.start();
+        this.getPortfolios();
+    },
+    data: function(){
+        return {
+            portfolios: [],
+        }
+    },
+    methods: {
+        getPortfolios: function(){
+            var resource = this.$resource('portfolio/');
+            resource.get({}, function(portfolios){
+                this.portfolios = portfolios;
+                NProgress.done();
+            });
+
+        },
     },
     ready: function(){
-        NProgress.done();
     }
+})
+
+var PortfolioItem = Vue.extend({
+    template: '#portfolioItemTPL',
+    data: function(){
+        return {
+            portfolio: {},
+        }
+    },
+    created: function(){
+        NProgress.start();
+        this.getPortfolio();
+    },
+    methods: {
+        getPortfolio: function(){
+            url = 'portfolio/'+this.$route.params.PortfolioId;
+            console.log(url);
+            var resource = this.$resource(url);
+            resource.get({}, function(portfolio){
+                console.log(portfolio);
+                this.portfolio = portfolio;
+                NProgress.done();
+            });
+
+        }
+    },
+
+
 })
 
 var Hell = Vue.extend({
@@ -149,8 +192,12 @@ router.map({
         component: Post,
     },
     '/protfolio': {
-    	name: 'portfolio',
+        name: 'portfolio',
         component: Portfolio
+    },
+    '/portfolioItem/:PortfolioId': {
+        name: 'portfolioItem',
+        component: PortfolioItem
     },
     '/hell': {
     	name: 'hell',

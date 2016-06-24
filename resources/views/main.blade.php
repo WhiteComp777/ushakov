@@ -51,6 +51,10 @@
 @include('vue.portfolio')
 </template>
 
+<template id="portfolioItemTPL">
+@include('vue.portfolioItem')
+</template>
+
 
 @include('vue.call')
 <template id="contactsTPL"> @include("vue.contacts") </template>

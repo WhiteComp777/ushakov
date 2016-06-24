@@ -33,7 +33,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li ><a href="/admin/post">Blog</a></li>
-            <li><a href="#about">Portfolio</a></li>
+            <li><a href="/admin/portfolio">Portfolio</a></li>
+            <li><a href="/laravel-filemanager">Files</a></li>
           
           </ul>
        

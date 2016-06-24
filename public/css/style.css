@@ -294,6 +294,7 @@ padding-bottom: 30px;
     width: 33%;
     display: inline-block;
     cursor: pointer;
+    vertical-align: top;
 }
 .portfolio .images{
     position: relative;
@@ -458,3 +459,18 @@ img.bigImg{
     width: 800px;
     margin: 0 auto;
 }
+#tinymce img {
+    width: 100%;
+    height: auto;
+}
+.pItem{}
+.pItem h1{
+    text-align: left;
+}
+.pItem h2{
+    text-align: left;
+}
+.pItem .images{}
+.pItem .images img{
+    width: 100%;
+} 

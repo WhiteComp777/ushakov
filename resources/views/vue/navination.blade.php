@@ -10,7 +10,7 @@
 			<li class="menu__item " v-bind:class="{ 'menu__item--current' :  $route.name=='blog' || $route.name=='post'  }">
 				<a href="#"  v-link="{ name: 'blog' }" class="menu__link">Мысли</a>
 			</li>
-			<li class="menu__item " v-bind:class="{ 'menu__item--current' :  $route.name=='portfolio'}">
+			<li class="menu__item " v-bind:class="{ 'menu__item--current' :  $route.name=='portfolio' || $route.name=='portfolioItem'} ">
 				<a href="#" v-link="{name: 'portfolio'}" class="menu__link">Ценность</a>
 			</li>
 			<li class="menu__item " v-bind:class="{ 'menu__item--current' :  $route.name=='hell'}">

@@ -12,21 +12,22 @@ class AdminBlogController extends Controller
         $this->middleware('auth');
     }
     function index(){
-    	$posts = BlogPost::all();
-    	return view('admin.posts', compact('posts'));
+        // $posts = BlogPost::all();
+        $posts = BlogPost::orderBy('id', 'desc')->get();
+    	return view('admin.posts.items', compact('posts'));
     }
     function create(){
-    	return view('admin.createPost');
+    	return view('admin.posts.create');
     }
     function show(BlogPost $post){
-    	return view('admin.createPost', compact('post'));
+    	return view('admin.posts.create', compact('post'));
     }
     function store(){
     	$post = BlogPost::create(request()->all());
     	return redirect('admin/post/'.$post->id);
     }
     function edit(BlogPost $post){
-        return view('admin.createPost', compact('post'));
+        return view('admin.posts.create', compact('post'));
     }
     function update(BlogPost $post){
         $post->update(request()->all());
