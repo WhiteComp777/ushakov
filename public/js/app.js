@@ -14,12 +14,8 @@ var Main = Vue.extend({
 
 var About = Vue.extend({
     template: '#aboutTPL',
-    data: function(){
-        return {
-            post: '',
-        }
-    },
-    // created: function(){
+    created: function(){  NProgress.start(); },
+    ready: function(){ NProgress.done(); },
     //     this.getPost();
     // },
     // methods: {
