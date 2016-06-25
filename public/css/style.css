@@ -297,6 +297,7 @@ padding-bottom: 30px;
     vertical-align: top;
     position: relative;
     float: left;
+    height: 226px;
 }
 .portfolio .images{
     position: relative;
@@ -312,14 +313,14 @@ padding-bottom: 30px;
 transform: scale(1.01);
 }
 .portfolio article header{
-    position: absolute;
-    height: 80px;
-    line-height: 80px;
-    top: 50%;
-    margin-top: -40px;
-    text-align: center;
-    width: 100%;
-    z-index: 3;
+    /* position: absolute; */
+    /* height: 80px; */
+    /* line-height: 80px; */
+    /* top: 50%; */
+    /* margin-top: -40px; */
+    /* text-align: center; */
+    /* width: 100%; */
+    /* z-index: 3; */
 }
 .portfolio article header h3{
     font-size: 20px;
@@ -545,6 +546,14 @@ img.bigImg{
 .portfolio article header a{
     text-decoration: none;
     color: white;
+    position: absolute;
+    height: 100%;
+    line-height: 226px;
+    top: 0;
+    /* margin-top: -40px; */
+    text-align: center;
+    width: 100%;
+    z-index: 3;
 }
 .portfolio article header{
     transition: .3s;
