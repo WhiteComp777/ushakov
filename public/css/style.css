@@ -633,6 +633,8 @@ img.bigImg{
         position: relative;
         z-index: 3;
         background: rgba(0, 0, 0, 0.49);
+        padding: 0 20px;
+        box-sizing: border-box;
     }
     .rhalf h2{
             color: #C7C7C7;
