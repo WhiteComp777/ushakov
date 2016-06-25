@@ -12,7 +12,8 @@ class BlogPost extends Model
 
     function short(){
 	$dom = HtmlDomParser::str_get_html( $this->content );
-	$elems = $dom->find('p');
+	if(!$dom) return "";
+    $elems = $dom->find('p');
 	// dd($elems);
 
 	if(count($elems)>0){
