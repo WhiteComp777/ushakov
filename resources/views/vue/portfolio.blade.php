@@ -11,6 +11,7 @@
 		</div>
 		<header>
 		<a href="#" v-link="{name: 'portfolioItem', params: { PortfolioId: portfolio.id }}">
+		<!-- <a href=""></a> -->
 		<h3>@{{portfolio.name}}</h3>
 		</a>
 	</header>

@@ -593,3 +593,21 @@ img.bigImg{
     bottom: 20px;
     left: 20px;
 }
+.btn-open   {
+        font-size: 20px;
+    display: inline-block;
+    border: 1px solid #D94F5C;
+    padding: 10px 20px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    float: right;
+    cursor: pointer;
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.pItem .images{
+    margin: 20px 0;
+}
+.pItem {
+    padding-bottom: 20px;
+}
