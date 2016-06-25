@@ -178,7 +178,7 @@ body{
 .section .inner{}
 .head_space{
     height: 50px;
-    margin-bottom: 5em;
+    margin-bottom: 50px;
 }
 .contacts{
     text-align: center;
@@ -332,10 +332,8 @@ transform: scale(1.01);
 }
 .body_inner{
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: padding 0.5s linear;
-    
-
 }
 .call{
     position: absolute;
@@ -619,4 +617,47 @@ img.bigImg{
 }
 .pItem {
     padding-bottom: 20px;
+}
+@media (max-width:768px) { 
+    .menu--prospero .menu__link{
+            margin: 0 15px;
+    }
+    .lhalf, .rhalf{
+        width: 100%;
+    }
+    .lhalf{
+        position: absolute;
+        z-index: 2;
+    }
+    .rhalf{
+        position: relative;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.49);
+    }
+    .rhalf h2{
+            color: #C7C7C7;
+            margin-top: 150px
+    }
+    .rhalf ol{
+        color: white;
+    }
+    .postPreview{
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+    }
+    .blog{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.blog_nav a{
+    padding-right: 20px;
+}
+
+.portfolio article{
+    width: 49.3%;
+}
 }
