@@ -9,6 +9,7 @@
 		<th>#</th>
 		<th>Title</th>
 		<th>Short</th>
+		<th>Open</th>
 		<th>Status</th>
 		<th>Edit</th>
 		<th>Delete</th>
@@ -22,6 +23,7 @@
 	<td>
 		{!! $post->short() !!}
 	</td>
+	<td><a href="http://ushakov.me/#!/post/{{ $post->id }}/" class="btn btn-primary">Open</a></td>
 	<td>
 	@if($post->active==1)
 	<span class="label label-success">Active</span>

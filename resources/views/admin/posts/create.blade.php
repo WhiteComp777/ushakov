@@ -3,7 +3,7 @@
 @if(!isset($post))  
 <h1>Create Posts</h1>
 @else
-<h1>Edit {{ $post->title }}</h1>
+<h1>Edit {{ $post->title }} <a href="http://ushakov.me/#!/post/{{ $post->id }}/" class="btn btn-primary">Open</a></h1>
 @endif
 <form action="@if(!isset($post))/admin/post @else /admin/post/{{$post->id}} @endif" method="post">
 	{{ csrf_field() }}
@@ -59,9 +59,13 @@
       "advlist autolink lists link image charmap print preview hr anchor pagebreak",
       "searchreplace wordcount visualblocks visualchars code fullscreen",
       "insertdatetime media nonbreaking save table contextmenu directionality",
-      "emoticons template paste textcolor colorpicker textpattern"
+      "emoticons template paste textpattern spellchecker"
     ],
-    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media",
+     spellchecker_languages: "Russian=ru,English=en",
+    spellchecker_language: "ru",  // default language
+    spellchecker_rpc_url: "http://speller.yandex.net/services/tinyspell",
+
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media spellchecker",
     relative_urls: false,
     file_browser_callback : function(field_name, url, type, win) {
       var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;

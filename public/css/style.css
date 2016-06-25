@@ -506,3 +506,7 @@ img.bigImg{
     /* list-style-type: circle; */
     padding: 8px 0;
 }
+.blog em{
+    color: #B5B5B5;
+    font-style: italic;
+}
