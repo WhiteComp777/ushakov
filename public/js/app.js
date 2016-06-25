@@ -6,7 +6,9 @@ var data = {
 var Main = Vue.extend({
     template: '#mainTPL',
     ready: function(){
+        if(window.innerWidth>800){
         startUniverce();
+        }
     },
     // data: function(){ return data; },
    
@@ -16,17 +18,7 @@ var About = Vue.extend({
     template: '#aboutTPL',
     created: function(){  NProgress.start(); },
     ready: function(){ NProgress.done(); },
-    //     this.getPost();
-    // },
-    // methods: {
-    //     getPost: function(){
-    //         aboutmeId = 4;
-    //         var resource = this.$resource('blog/4');
-    //         resource.get({}, function(post){
-    //             this.post = post;
-    //         });
-    //     }
-    // },
+
 
 })
 
